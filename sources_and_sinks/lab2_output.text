@@ -1,0 +1,248 @@
+======== traceroute -P icmp www.geant.net | tee -a lab2_output.text ========
+ 1  router (147.102.13.200)  0.642 ms *  0.755 ms
+ 2  ntua-zogr-4-gw.koletti-1.access-link.grnet.gr (194.177.209.117)  37.828 ms  0.667 ms  0.613 ms
+ 3  eie2-to-kol1.backbone.grnet.gr (195.251.27.54)  0.721 ms  0.652 ms  0.709 ms
+ 4  grnet.mx2.ath.gr.geant.net (62.40.124.89)  0.871 ms  0.812 ms  0.757 ms
+ 5  ae2.rt1.vie.at.geant.net (62.40.112.165)  29.906 ms  29.882 ms  46.063 ms
+ 6  SP2013NLB.geant.net (62.40.105.162)  30.417 ms  30.165 ms  30.222 ms
+
+
+======== traceroute -P icmp nova.torproject.org | tee -a lab2_output.text ========
+ 1  * * *
+ 2  ntua-zogr-4-gw.koletti-1.access-link.grnet.gr (194.177.209.117)  0.758 ms  0.579 ms  0.632 ms
+ 3  eie2-to-kol1.backbone.grnet.gr (195.251.27.54)  153.176 ms  0.750 ms  0.754 ms
+ 4  grnet.mx2.ath.gr.geant.net (62.40.124.89)  0.835 ms  0.765 ms  0.810 ms
+ 5  ae1.mx1.ath.gr.geant.net (62.40.112.215)  0.857 ms  0.805 ms  0.851 ms
+ 6  ae2.mx1.mil2.it.geant.net (62.40.98.150)  31.378 ms  31.332 ms  31.463 ms
+ 7  ae2.mx1.gen.ch.geant.net (62.40.98.112)  38.429 ms  38.367 ms  38.425 ms
+ 8  ae4.mx1.par.fr.geant.net (62.40.98.152)  45.578 ms  46.349 ms  45.660 ms
+ 9  ae1.mx1.lon.uk.geant.net (62.40.98.76)  53.596 ms  53.560 ms  53.654 ms
+10  ae0.mx1.ams.nl.geant.net (62.40.98.81)  58.933 ms  58.797 ms  58.786 ms
+11  nl-sar.nordu.net (109.105.102.81)  61.210 ms  61.048 ms  61.229 ms
+12  ams16-core-1.gigabiteth8-1-0.swip.net (195.69.145.139)  54.984 ms  56.135 ms  54.898 ms
+13  ams16-core-4.bundle-ether5.tele2.net (130.244.206.166)  55.335 ms  55.709 ms  55.288 ms
+14  ams-core-2.bundle-ether2.tele2.net (130.244.39.234)  55.344 ms  55.382 ms  56.925 ms
+15  fra36-core-1.bundle-ether4.tele2.net (130.244.64.200)  55.447 ms  55.544 ms  55.446 ms
+16  wen1-core-2.bundle-ether7.tele2.net (130.244.206.29)  55.671 ms  55.212 ms  55.458 ms
+17  wen3-core-1.tengigabiteth2-1-0.tele2.net (130.244.205.72)  55.506 ms  55.487 ms  55.642 ms
+18  130.244.49.118 (130.244.49.118)  55.081 ms  55.280 ms  55.162 ms
+19  c76wuni1-tge1-1.net.uta.at (212.152.192.105)  55.184 ms  55.390 ms  55.545 ms
+20  81.189.132.122 (81.189.132.122)  97.642 ms  99.053 ms  60.053 ms
+21  nova.torproject.org (86.59.30.40)  55.480 ms  55.228 ms  57.843 ms
+
+
+======== traceroute -P icmp www.auth.gr | tee -a lab2_output.text ========
+ 1  router (147.102.13.200)  0.447 ms *  0.757 ms
+ 2  ntua-zogr-4-gw.koletti-1.access-link.grnet.gr (194.177.209.117)  0.582 ms  0.552 ms  0.585 ms
+ 3  eie2-to-koletti1.backbone.grnet.gr (195.251.27.46)  0.747 ms  0.709 ms  0.690 ms
+ 4  auth-thes-4.eie-2.access-link.grnet.gr (62.217.98.23)  12.724 ms  11.302 ms  13.517 ms
+ 5  www.ccf.auth.gr (155.207.1.12)  8.418 ms  8.369 ms  8.319 ms
+
+
+======== traceroute -P icmp aueb.gr | tee -a lab2_output.text ========
+ 1  * * *
+ 2  ntua-zogr-4-gw.koletti-1.access-link.grnet.gr (194.177.209.117)  0.744 ms  0.588 ms  0.626 ms
+ 3  aueb-2.koletti-1.access-link.grnet.gr (195.251.24.6)  0.826 ms  0.767 ms  0.798 ms
+ 4  eclass2.aueb.gr (195.251.255.190)  0.781 ms  0.696 ms  0.704 ms
+ 5  * * *
+ 6  * * *
+ 7  * * *
+ 8  * * *
+ 9  * * *
+10  * * *
+11  * * *
+12  * * *
+13  * * *
+14  * * *
+15  * * *
+16  * * *
+17  * * *
+18  * * *
+19  * * *
+20  * * *
+21  * * *
+22  * * *
+23  * * *
+24  * * *
+25  * * *
+26  * * *
+27  * * *
+28  * * *
+29  * * *
+30  * * *
+31  * * *
+32  * * *
+33  * * *
+34  * * *
+35  * * *
+36  * * *
+37  * * *
+38  * * *
+39  * * *
+40  * * *
+41  * * *
+42  * * *
+43  * * *
+44  * * *
+45  * * *
+46  * * *
+47  * * *
+48  * * *
+49  * * *
+50  * * *
+51  * * *
+52  * * *
+53  * * *
+54  * * *
+55  * * *
+56  * * *
+57  * * *
+58  * * *
+59  * * *
+60  * * *
+61  * * *
+62  * * *
+63  * * *
+64  * * *
+
+
+======== traceroute -P icmp uoa.gr | tee -a lab2_output.text ========
+ 1  router (147.102.13.200)  0.489 ms * *
+ 2  147.102.224.34 (147.102.224.34)  1.051 ms  0.711 ms  0.667 ms
+ 3  195.134.71.229 (195.134.71.229)  0.669 ms  0.531 ms  0.590 ms
+
+
+======== traceroute -P icmp duth.gr | tee -a lab2_output.text ========
+ 1  * * *
+ 2  ntua-zogr-4-gw.koletti-1.access-link.grnet.gr (194.177.209.117)  2.052 ms  1.155 ms  2.273 ms
+ 3  eie2-to-kol1.backbone.grnet.gr (195.251.27.54)  0.973 ms  0.922 ms  0.844 ms
+ 4  eie1-to-eie2.backbone.grnet.gr (195.251.27.154)  0.904 ms  0.833 ms  0.809 ms
+ 5  thessaloniki2-to-eie1.backbone.grnet.gr (195.251.27.58)  8.657 ms  8.631 ms  8.665 ms
+ 6  xanthi2-to-thessaloniki2.backbone.grnet.gr (195.251.27.50)  12.099 ms  12.068 ms  12.109 ms
+ 7  duth-xan-13.xanthi-2.access-link.grnet.gr (62.217.96.11)  19.427 ms  22.611 ms *
+ 8  duth.gr (192.108.114.80)  12.479 ms  12.265 ms  12.250 ms
+
+
+======== traceroute -P icmp uoc.gr | tee -a lab2_output.text ========
+ 1  router (147.102.13.200)  0.472 ms * *
+ 2  ntua-zogr-4-gw.koletti-1.access-link.grnet.gr (194.177.209.117)  0.853 ms  0.614 ms  0.548 ms
+ 3  eie2-to-koletti1.backbone.grnet.gr (195.251.27.46)  0.685 ms  0.681 ms  0.692 ms
+ 4  uoc-knossos-1.eie-2.access-link.grnet.gr (195.251.25.206)  7.968 ms  7.685 ms  7.647 ms
+ 5  147.52.1.246 (147.52.1.246)  7.913 ms  7.886 ms  7.693 ms
+ 6  ns.uoc.gr (147.52.80.1)  7.840 ms  7.862 ms  7.893 ms
+
+
+======== traceroute -P icmp panteion.gr | tee -a lab2_output.text ========
+ 1  * * *
+ 2  ntua-zogr-4-gw.koletti-1.access-link.grnet.gr (194.177.209.117)  4.854 ms  6.146 ms  0.617 ms
+ 3  eie2-to-koletti1.backbone.grnet.gr (195.251.27.46)  0.751 ms  0.738 ms  0.724 ms
+ 4  panteion-2.eie-2.access-link.grnet.gr (195.251.24.142)  1.534 ms  1.283 ms  1.295 ms
+ 5  sociology.panteion.gr (194.177.218.53)  1.766 ms  1.434 ms  1.341 ms
+
+
+======== traceroute -P icmp uth.gr | tee -a lab2_output.text ========
+ 1  * * *
+ 2  ntua-zogr-4-gw.koletti-1.access-link.grnet.gr (194.177.209.117)  0.815 ms  0.606 ms  0.567 ms
+ 3  eie2-to-koletti1.backbone.grnet.gr (195.251.27.46)  0.698 ms  0.682 ms  0.745 ms
+ 4  uth-volareos-2.eie-2.access-link.grnet.gr (195.251.24.242)  6.615 ms  6.490 ms  6.425 ms
+ 5  ira.uth.gr (194.177.200.10)  6.659 ms  6.678 ms  6.679 ms
+
+
+======== traceroute -P icmp aegean.gr | tee -a lab2_output.text ========
+ 1  * * router (147.102.13.200)  0.668 ms
+ 2  ntua-zogr-4-gw.koletti-1.access-link.grnet.gr (194.177.209.117)  16.928 ms  6.299 ms  0.627 ms
+ 3  eie2-to-kol1.backbone.grnet.gr (195.251.27.54)  0.969 ms  0.829 ms  0.873 ms
+ 4  heraklio-2-to-koletti-1.backbone.grnet.gr (195.251.27.90)  7.638 ms  7.436 ms  7.466 ms
+ 5  Syros-to-Heraklio2.backbone.grnet.gr (195.251.27.81)  11.574 ms  11.507 ms  11.441 ms
+ 6  aegean-limn-1.syros.access-link.grnet.gr (194.177.209.18)  18.540 ms  18.449 ms  18.517 ms
+ 7  lemnos-dc.aegean.gr (195.251.152.1)  18.820 ms  18.638 ms  18.692 ms
+
+
+======== traceroute -P icmp uoi.gr | tee -a lab2_output.text ========
+ 1  * router (147.102.13.200)  2.060 ms *
+ 2  ntua-zogr-4-gw.koletti-1.access-link.grnet.gr (194.177.209.117)  0.701 ms  0.541 ms  0.583 ms
+ 3  patra2-to-koletti1.backbone.grnet.gr (195.251.27.37)  3.550 ms  3.492 ms  3.456 ms
+ 4  ioannina2-to-patra2.backbone.grnet.gr (195.251.27.73)  7.079 ms  7.037 ms  7.090 ms
+ 5  uoi-5.ioannina-2.access-link.grnet.gr (195.251.24.210)  28.455 ms  18.848 ms  13.185 ms
+ 6  boufos.bbr.uoi.gr (195.130.120.244)  7.761 ms  7.398 ms  7.377 ms
+ 7  web2.noc.uoi.gr (195.130.120.107)  7.411 ms  7.258 ms  7.304 ms
+
+
+======== traceroute -P icmp www.unipi.gr | tee -a lab2_output.text ========
+ 1  * * *
+ 2  ntua-zogr-4-gw.koletti-1.access-link.grnet.gr (194.177.209.117)  1.363 ms  0.627 ms  0.651 ms
+ 3  eie2-to-koletti1.backbone.grnet.gr (195.251.27.46)  0.750 ms  0.681 ms  0.750 ms
+ 4  unipi-2.eie-2.access-link.grnet.gr (195.251.24.134)  1.273 ms  1.132 ms  1.236 ms
+ 5  spider.unipi.gr (195.251.229.6)  1.288 ms  1.176 ms  1.241 ms
+
+
+======== traceroute -P icmp ntua.gr | tee -a lab2_output.text ========
+ 1  * * *
+ 2  achilles.noc.ntua.gr (147.102.222.210)  0.580 ms  0.375 ms  0.412 ms
+
+
+======== traceroute -P icmp www.upatras.gr | tee -a lab2_output.text ========
+ 1  * * *
+ 2  ntua-zogr-4-gw.koletti-1.access-link.grnet.gr (194.177.209.117)  0.777 ms  0.564 ms  0.597 ms
+ 3  upatras-1.koletti-1.access-link.grnet.gr (195.251.24.46)  4.094 ms  3.904 ms  3.909 ms
+ 4  * * *
+ 5  * * *
+ 6  * * *
+ 7  * * *
+ 8  * * *
+ 9  * * *
+10  * * *
+11  * * *
+12  * * *
+13  * * *
+14  * * *
+15  * * *
+16  * * *
+17  * * *
+18  * * *
+19  * * *
+20  * * *
+21  * * *
+22  * * *
+23  * * *
+24  * * *
+25  * * *
+26  * * *
+27  * * *
+28  * * *
+29  * * *
+30  * * *
+31  * * *
+32  * * *
+33  * * *
+34  * * *
+35  * * *
+36  * * *
+37  * * *
+38  * * *
+39  * * *
+40  * * *
+41  * * *
+42  * * *
+43  * * *
+44  * * *
+45  * * *
+46  * * *
+47  * * *
+48  * * *
+49  * * *
+50  * * *
+51  * * *
+52  * * *
+53  * * *
+54  * * *
+55  * * *
+56  * * *
+57  * * *
+58  * * *
+59  * * *
+60  * * *
+61  * * *
+62  * * *
+63  * * *
+64  * * *
