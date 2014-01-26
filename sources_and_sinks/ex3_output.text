@@ -1,0 +1,484 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; erotima 1 ;;;;;;;;;;;;;;;;;;;;
+; <<>> DiG 9.6.2-P2 <<>> @ulysses.noc.ntua.gr danaos.cslab.ntua.gr A
+; (2 servers found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 45597
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 6, ADDITIONAL: 8
+
+;; QUESTION SECTION:
+;danaos.cslab.ntua.gr.		IN	A
+
+;; ANSWER SECTION:
+danaos.cslab.ntua.gr.	86400	IN	CNAME	danaos.cslab.ece.ntua.gr.
+danaos.cslab.ece.ntua.gr. 86400	IN	A	147.102.3.1
+
+;; AUTHORITY SECTION:
+cslab.ece.ntua.gr.	86400	IN	NS	diomedes.noc.ntua.gr.
+cslab.ece.ntua.gr.	86400	IN	NS	danaos.cslab.ece.ntua.gr.
+cslab.ece.ntua.gr.	86400	IN	NS	scirouter.cslab.ece.ntua.gr.
+cslab.ece.ntua.gr.	86400	IN	NS	skiathos.cslab.ece.ntua.gr.
+cslab.ece.ntua.gr.	86400	IN	NS	ulysses.noc.ntua.gr.
+cslab.ece.ntua.gr.	86400	IN	NS	achilles.noc.ntua.gr.
+
+;; ADDITIONAL SECTION:
+ulysses.noc.ntua.gr.	86400	IN	A	147.102.222.230
+ulysses.noc.ntua.gr.	86400	IN	AAAA	2001:648:2000:de::230
+achilles.noc.ntua.gr.	86400	IN	A	147.102.222.210
+achilles.noc.ntua.gr.	86400	IN	AAAA	2001:648:2000:de::210
+diomedes.noc.ntua.gr.	86400	IN	A	147.102.222.220
+diomedes.noc.ntua.gr.	86400	IN	AAAA	2001:648:2000:de::220
+skiathos.cslab.ece.ntua.gr. 86400 IN	A	147.102.3.40
+scirouter.cslab.ece.ntua.gr. 86400 IN	A	147.102.4.1
+
+;; Query time: 1 msec
+;; SERVER: 147.102.222.230#53(147.102.222.230)
+;; WHEN: Sat Jan 25 17:59:54 2014
+;; MSG SIZE  rcvd: 382
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; erotima 2 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; <<>> DiG 9.6.2-P2 <<>> @ulysses.noc.ntua.gr netmode.ece.ntua.gr SOA
+; (2 servers found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 5568
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 3, ADDITIONAL: 5
+
+;; QUESTION SECTION:
+;netmode.ece.ntua.gr.		IN	SOA
+
+;; ANSWER SECTION:
+netmode.ece.ntua.gr.	86400	IN	SOA	dolly.netmode.ece.ntua.gr. root.dolly.netmode.ece.ntua.gr. 2013112001 43200 3600 345600 86400
+
+;; AUTHORITY SECTION:
+netmode.ece.ntua.gr.	86400	IN	NS	ulysses.noc.ntua.gr.
+netmode.ece.ntua.gr.	86400	IN	NS	achilles.noc.ntua.gr.
+netmode.ece.ntua.gr.	86400	IN	NS	dolly.netmode.ece.ntua.gr.
+
+;; ADDITIONAL SECTION:
+dolly.netmode.ece.ntua.gr. 86400 IN	A	147.102.13.10
+ulysses.noc.ntua.gr.	86400	IN	A	147.102.222.230
+ulysses.noc.ntua.gr.	86400	IN	AAAA	2001:648:2000:de::230
+achilles.noc.ntua.gr.	86400	IN	A	147.102.222.210
+achilles.noc.ntua.gr.	86400	IN	AAAA	2001:648:2000:de::210
+
+;; Query time: 1 msec
+;; SERVER: 147.102.222.230#53(147.102.222.230)
+;; WHEN: Sat Jan 25 23:40:35 2014
+;; MSG SIZE  rcvd: 251
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; erotima 3 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr -x 147.102.13.200
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 176
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 3, ADDITIONAL: 5
+
+;; QUESTION SECTION:
+;200.13.102.147.in-addr.arpa.	IN	PTR
+
+;; ANSWER SECTION:
+200.13.102.147.in-addr.arpa. 86400 IN	PTR	router.netmode.ece.ntua.gr.
+
+;; AUTHORITY SECTION:
+13.102.147.in-addr.arpa. 86400	IN	NS	ulysses.noc.ntua.gr.
+13.102.147.in-addr.arpa. 86400	IN	NS	achilles.noc.ntua.gr.
+13.102.147.in-addr.arpa. 86400	IN	NS	dolly.netmode.ece.ntua.gr.
+
+;; ADDITIONAL SECTION:
+dolly.netmode.ece.ntua.gr. 86400 IN	A	147.102.13.10
+ulysses.noc.ntua.gr.	36001	IN	A	147.102.222.230
+ulysses.noc.ntua.gr.	64838	IN	AAAA	2001:648:2000:de::230
+achilles.noc.ntua.gr.	77057	IN	A	147.102.222.210
+achilles.noc.ntua.gr.	44879	IN	AAAA	2001:648:2000:de::210
+
+;; Query time: 0 msec
+;; SERVER: 147.102.13.10#53(147.102.13.10)
+;; WHEN: Sat Jan 25 23:43:27 2014
+;; MSG SIZE  rcvd: 258
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;; erotima 5 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr ntua.gr MX
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 59231
+;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 5, ADDITIONAL: 10
+
+;; QUESTION SECTION:
+;ntua.gr.			IN	MX
+
+;; ANSWER SECTION:
+ntua.gr.		63910	IN	MX	20 achilles.noc.ntua.gr.
+ntua.gr.		63910	IN	MX	20 diomedes.noc.ntua.gr.
+ntua.gr.		63910	IN	MX	20 ulysses.noc.ntua.gr.
+
+;; AUTHORITY SECTION:
+ntua.gr.		53599	IN	NS	sns0.grnet.gr.
+ntua.gr.		53599	IN	NS	achilles.noc.ntua.gr.
+ntua.gr.		53599	IN	NS	diomedes.noc.ntua.gr.
+ntua.gr.		53599	IN	NS	sns1.grnet.gr.
+ntua.gr.		53599	IN	NS	ulysses.noc.ntua.gr.
+
+;; ADDITIONAL SECTION:
+achilles.noc.ntua.gr.	76240	IN	A	147.102.222.210
+achilles.noc.ntua.gr.	44062	IN	AAAA	2001:648:2000:de::210
+diomedes.noc.ntua.gr.	72212	IN	A	147.102.222.220
+diomedes.noc.ntua.gr.	32702	IN	AAAA	2001:648:2000:de::220
+ulysses.noc.ntua.gr.	35184	IN	A	147.102.222.230
+ulysses.noc.ntua.gr.	64021	IN	AAAA	2001:648:2000:de::230
+sns0.grnet.gr.		45960	IN	A	83.212.5.18
+sns0.grnet.gr.		366	IN	AAAA	2001:648:2ffc:111::2
+sns1.grnet.gr.		45960	IN	A	83.212.5.22
+sns1.grnet.gr.		70153	IN	AAAA	2001:648:2ffc:112::2
+
+;; Query time: 1 msec
+;; SERVER: 147.102.13.10#53(147.102.13.10)
+;; WHEN: Sat Jan 25 23:57:04 2014
+;; MSG SIZE  rcvd: 409
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;; erotima 6 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr smtp.hol.gr A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 23328
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 3, ADDITIONAL: 3
+
+;; QUESTION SECTION:
+;smtp.hol.gr.			IN	A
+
+;; ANSWER SECTION:
+smtp.hol.gr.		7175	IN	A	194.30.193.52
+smtp.hol.gr.		7175	IN	A	194.30.193.54
+
+;; AUTHORITY SECTION:
+hol.gr.			7265	IN	NS	ns1.hol.gr.
+hol.gr.			7265	IN	NS	ns2.hol.gr.
+hol.gr.			7265	IN	NS	ns0.hol.gr.
+
+;; ADDITIONAL SECTION:
+ns2.hol.gr.		2794	IN	A	194.30.220.118
+ns1.hol.gr.		2794	IN	A	194.30.220.119
+ns0.hol.gr.		2794	IN	A	194.30.220.110
+
+;; Query time: 0 msec
+;; SERVER: 147.102.13.10#53(147.102.13.10)
+;; WHEN: Sat Jan 25 23:59:30 2014
+;; MSG SIZE  rcvd: 163
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;; erotima 7 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 18873
+;; flags: qr rd ra; QUERY: 1, ANSWER: 13, AUTHORITY: 0, ADDITIONAL: 13
+
+;; QUESTION SECTION:
+;.				IN	NS
+
+;; ANSWER SECTION:
+.			179937	IN	NS	f.root-servers.net.
+.			179937	IN	NS	j.root-servers.net.
+.			179937	IN	NS	c.root-servers.net.
+.			179937	IN	NS	h.root-servers.net.
+.			179937	IN	NS	m.root-servers.net.
+.			179937	IN	NS	e.root-servers.net.
+.			179937	IN	NS	a.root-servers.net.
+.			179937	IN	NS	g.root-servers.net.
+.			179937	IN	NS	l.root-servers.net.
+.			179937	IN	NS	i.root-servers.net.
+.			179937	IN	NS	b.root-servers.net.
+.			179937	IN	NS	k.root-servers.net.
+.			179937	IN	NS	d.root-servers.net.
+
+;; ADDITIONAL SECTION:
+i.root-servers.net.	296817	IN	A	192.36.148.17
+i.root-servers.net.	411474	IN	AAAA	2001:7fe::53
+c.root-servers.net.	296875	IN	A	192.33.4.12
+j.root-servers.net.	224454	IN	A	192.58.128.30
+j.root-servers.net.	411474	IN	AAAA	2001:503:c27::2:30
+h.root-servers.net.	296875	IN	A	128.63.2.53
+h.root-servers.net.	389917	IN	AAAA	2001:500:1::803f:235
+f.root-servers.net.	296617	IN	A	192.5.5.241
+f.root-servers.net.	407432	IN	AAAA	2001:500:2f::f
+l.root-servers.net.	296875	IN	A	199.7.83.42
+l.root-servers.net.	259307	IN	AAAA	2001:500:3::42
+b.root-servers.net.	296875	IN	A	192.228.79.201
+m.root-servers.net.	296875	IN	A	202.12.27.33
+
+;; Query time: 0 msec
+;; SERVER: 147.102.13.10#53(147.102.13.10)
+;; WHEN: Sun Jan 26 00:01:03 2014
+;; MSG SIZE  rcvd: 496
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr gr
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 56657
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;gr.				IN	A
+
+;; AUTHORITY SECTION:
+gr.			1773	IN	SOA	grdns.ics.forth.gr. hmaster-info.ics.forth.gr. 1401251894 3600 180 2592000 1800
+
+;; Query time: 1 msec
+;; SERVER: 147.102.13.10#53(147.102.13.10)
+;; WHEN: Sun Jan 26 00:01:09 2014
+;; MSG SIZE  rcvd: 85
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr ntua.gr
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 45500
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 5, ADDITIONAL: 10
+
+;; QUESTION SECTION:
+;ntua.gr.			IN	A
+
+;; ANSWER SECTION:
+ntua.gr.		86400	IN	A	147.102.222.210
+
+;; AUTHORITY SECTION:
+ntua.gr.		53344	IN	NS	ulysses.noc.ntua.gr.
+ntua.gr.		53344	IN	NS	sns1.grnet.gr.
+ntua.gr.		53344	IN	NS	diomedes.noc.ntua.gr.
+ntua.gr.		53344	IN	NS	achilles.noc.ntua.gr.
+ntua.gr.		53344	IN	NS	sns0.grnet.gr.
+
+;; ADDITIONAL SECTION:
+sns0.grnet.gr.		45705	IN	A	83.212.5.18
+sns0.grnet.gr.		111	IN	AAAA	2001:648:2ffc:111::2
+ulysses.noc.ntua.gr.	34929	IN	A	147.102.222.230
+ulysses.noc.ntua.gr.	63766	IN	AAAA	2001:648:2000:de::230
+diomedes.noc.ntua.gr.	71957	IN	A	147.102.222.220
+diomedes.noc.ntua.gr.	32447	IN	AAAA	2001:648:2000:de::220
+achilles.noc.ntua.gr.	75985	IN	A	147.102.222.210
+achilles.noc.ntua.gr.	43807	IN	AAAA	2001:648:2000:de::210
+sns1.grnet.gr.		45705	IN	A	83.212.5.22
+sns1.grnet.gr.		69898	IN	AAAA	2001:648:2ffc:112::2
+
+;; Query time: 4 msec
+;; SERVER: 147.102.13.10#53(147.102.13.10)
+;; WHEN: Sun Jan 26 00:01:19 2014
+;; MSG SIZE  rcvd: 377
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr netmode.ntua.gr
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 28408
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 3, ADDITIONAL: 5
+
+;; QUESTION SECTION:
+;netmode.ntua.gr.		IN	A
+
+;; ANSWER SECTION:
+netmode.ntua.gr.	86400	IN	A	147.102.13.10
+
+;; AUTHORITY SECTION:
+netmode.ntua.gr.	86400	IN	NS	ulysses.noc.ntua.gr.
+netmode.ntua.gr.	86400	IN	NS	dolly.netmode.ece.ntua.gr.
+netmode.ntua.gr.	86400	IN	NS	achilles.noc.ntua.gr.
+
+;; ADDITIONAL SECTION:
+dolly.netmode.ece.ntua.gr. 86400 IN	A	147.102.13.10
+ulysses.noc.ntua.gr.	34916	IN	A	147.102.222.230
+ulysses.noc.ntua.gr.	63753	IN	AAAA	2001:648:2000:de::230
+achilles.noc.ntua.gr.	75972	IN	A	147.102.222.210
+achilles.noc.ntua.gr.	43794	IN	AAAA	2001:648:2000:de::210
+
+;; Query time: 0 msec
+;; SERVER: 147.102.13.10#53(147.102.13.10)
+;; WHEN: Sun Jan 26 00:01:32 2014
+;; MSG SIZE  rcvd: 234
+
+
+;;;;;;;;;;;;;;;;;;; b ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; <<>> DiG 9.6.2-P2 <<>> +trace netmode.ntua.gr
+;; global options: +cmd
+.			179891	IN	NS	e.root-servers.net.
+.			179891	IN	NS	j.root-servers.net.
+.			179891	IN	NS	a.root-servers.net.
+.			179891	IN	NS	f.root-servers.net.
+.			179891	IN	NS	g.root-servers.net.
+.			179891	IN	NS	b.root-servers.net.
+.			179891	IN	NS	c.root-servers.net.
+.			179891	IN	NS	i.root-servers.net.
+.			179891	IN	NS	k.root-servers.net.
+.			179891	IN	NS	m.root-servers.net.
+.			179891	IN	NS	l.root-servers.net.
+.			179891	IN	NS	d.root-servers.net.
+.			179891	IN	NS	h.root-servers.net.
+;; Received 496 bytes from 147.102.13.10#53(147.102.13.10) in 1 ms
+
+gr.			172800	IN	NS	gr-ix.ics.forth.gr.
+gr.			172800	IN	NS	gr-m.ics.forth.gr.
+gr.			172800	IN	NS	grdns.ics.forth.gr.
+gr.			172800	IN	NS	gr-at.ics.forth.gr.
+gr.			172800	IN	NS	grdns-de.denic.de.
+gr.			172800	IN	NS	estia.ics.forth.gr.
+gr.			172800	IN	NS	gr-br.ics.forth.gr.
+gr.			172800	IN	NS	gr-us.ics.forth.gr.
+;; Received 453 bytes from 192.228.79.201#53(b.root-servers.net) in 212 ms
+
+ntua.gr.		10800	IN	NS	achilles.noc.ntua.gr.
+ntua.gr.		10800	IN	NS	sns0.grnet.gr.
+ntua.gr.		10800	IN	NS	sns1.grnet.gr.
+ntua.gr.		10800	IN	NS	ulysses.noc.ntua.gr.
+ntua.gr.		10800	IN	NS	diomedes.noc.ntua.gr.
+;; Received 197 bytes from 139.91.191.3#53(estia.ics.forth.gr) in 7 ms
+
+netmode.ntua.gr.	86400	IN	A	147.102.13.10
+netmode.ntua.gr.	86400	IN	NS	dolly.netmode.ece.ntua.gr.
+netmode.ntua.gr.	86400	IN	NS	achilles.noc.ntua.gr.
+netmode.ntua.gr.	86400	IN	NS	ulysses.noc.ntua.gr.
+;; Received 234 bytes from 147.102.222.210#53(achilles.noc.ntua.gr) in 0 ms
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; erotima 8 ;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr space.netmode.ece.ntua.gr A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 17848
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 3, ADDITIONAL: 5
+
+;; QUESTION SECTION:
+;space.netmode.ece.ntua.gr.	IN	A
+
+;; ANSWER SECTION:
+space.netmode.ece.ntua.gr. 86400 IN	A	147.102.13.248
+
+;; AUTHORITY SECTION:
+netmode.ece.ntua.gr.	86400	IN	NS	achilles.noc.ntua.gr.
+netmode.ece.ntua.gr.	86400	IN	NS	dolly.netmode.ece.ntua.gr.
+netmode.ece.ntua.gr.	86400	IN	NS	ulysses.noc.ntua.gr.
+
+;; ADDITIONAL SECTION:
+dolly.netmode.ece.ntua.gr. 86400 IN	A	147.102.13.10
+ulysses.noc.ntua.gr.	34795	IN	A	147.102.222.230
+ulysses.noc.ntua.gr.	63632	IN	AAAA	2001:648:2000:de::230
+achilles.noc.ntua.gr.	75851	IN	A	147.102.222.210
+achilles.noc.ntua.gr.	43673	IN	AAAA	2001:648:2000:de::210
+
+;; Query time: 1 msec
+;; SERVER: 147.102.13.10#53(147.102.13.10)
+;; WHEN: Sun Jan 26 00:03:33 2014
+;; MSG SIZE  rcvd: 232
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr space.netmode.ece.ntua.gr A
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 24441
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 3, ADDITIONAL: 5
+
+;; QUESTION SECTION:
+;space.netmode.ece.ntua.gr.	IN	A
+
+;; ANSWER SECTION:
+space.netmode.ece.ntua.gr. 86400 IN	A	147.102.13.248
+
+;; AUTHORITY SECTION:
+netmode.ece.ntua.gr.	86400	IN	NS	dolly.netmode.ece.ntua.gr.
+netmode.ece.ntua.gr.	86400	IN	NS	achilles.noc.ntua.gr.
+netmode.ece.ntua.gr.	86400	IN	NS	ulysses.noc.ntua.gr.
+
+;; ADDITIONAL SECTION:
+dolly.netmode.ece.ntua.gr. 86400 IN	A	147.102.13.10
+ulysses.noc.ntua.gr.	34783	IN	A	147.102.222.230
+ulysses.noc.ntua.gr.	63620	IN	AAAA	2001:648:2000:de::230
+achilles.noc.ntua.gr.	75839	IN	A	147.102.222.210
+achilles.noc.ntua.gr.	43661	IN	AAAA	2001:648:2000:de::210
+
+;; Query time: 0 msec
+;; SERVER: 147.102.13.10#53(147.102.13.10)
+;; WHEN: Sun Jan 26 00:03:45 2014
+;; MSG SIZE  rcvd: 232
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr achilles.noc.ntua.gr
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 7981
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 3, ADDITIONAL: 5
+
+;; QUESTION SECTION:
+;achilles.noc.ntua.gr.		IN	A
+
+;; ANSWER SECTION:
+achilles.noc.ntua.gr.	75809	IN	A	147.102.222.210
+
+;; AUTHORITY SECTION:
+noc.ntua.gr.		65187	IN	NS	diomedes.noc.ntua.gr.
+noc.ntua.gr.		65187	IN	NS	ulysses.noc.ntua.gr.
+noc.ntua.gr.		65187	IN	NS	achilles.noc.ntua.gr.
+
+;; ADDITIONAL SECTION:
+achilles.noc.ntua.gr.	43631	IN	AAAA	2001:648:2000:de::210
+diomedes.noc.ntua.gr.	71781	IN	A	147.102.222.220
+diomedes.noc.ntua.gr.	32271	IN	AAAA	2001:648:2000:de::220
+ulysses.noc.ntua.gr.	34753	IN	A	147.102.222.230
+ulysses.noc.ntua.gr.	63590	IN	AAAA	2001:648:2000:de::230
+
+;; Query time: 0 msec
+;; SERVER: 147.102.13.10#53(147.102.13.10)
+;; WHEN: Sun Jan 26 00:04:15 2014
+;; MSG SIZE  rcvd: 229
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr achilles.noc.ntua.gr
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 25073
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 3, ADDITIONAL: 5
+
+;; QUESTION SECTION:
+;achilles.noc.ntua.gr.		IN	A
+
+;; ANSWER SECTION:
+achilles.noc.ntua.gr.	75795	IN	A	147.102.222.210
+
+;; AUTHORITY SECTION:
+noc.ntua.gr.		65173	IN	NS	achilles.noc.ntua.gr.
+noc.ntua.gr.		65173	IN	NS	ulysses.noc.ntua.gr.
+noc.ntua.gr.		65173	IN	NS	diomedes.noc.ntua.gr.
+
+;; ADDITIONAL SECTION:
+achilles.noc.ntua.gr.	43617	IN	AAAA	2001:648:2000:de::210
+diomedes.noc.ntua.gr.	71767	IN	A	147.102.222.220
+diomedes.noc.ntua.gr.	32257	IN	AAAA	2001:648:2000:de::220
+ulysses.noc.ntua.gr.	34739	IN	A	147.102.222.230
+ulysses.noc.ntua.gr.	63576	IN	AAAA	2001:648:2000:de::230
+
+;; Query time: 0 msec
+;; SERVER: 147.102.13.10#53(147.102.13.10)
+;; WHEN: Sun Jan 26 00:04:29 2014
+;; MSG SIZE  rcvd: 229
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
