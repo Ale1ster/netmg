@@ -154,23 +154,13 @@ Internet Control Message Protocol
 
 ======== openssl genrsa -out gened.key 2>&1 | tee -a lab4_output.text ========
 Generating RSA private key, 512 bit long modulus
-.......++++++++++++
-..++++++++++++
+.....................................++++++++++++
+...............++++++++++++
 e is 65537 (0x10001)
 
 
-======== openssl req -new -key gened.key -keyform PEM -out requed.csr 2>&1 | tee -a lab4_output.text ========
-You are about to be asked to enter information that will be incorporated
-into your certificate request.
-What you are about to enter is what is called a Distinguished Name or a DN.
-There are quite a few fields but you can leave some blank
-For some fields there will be a default value,
-If you enter '.', the field will be left blank.
------
-Country Name (2 letter code) []:State or Province Name (full name) []:Locality Name (eg, city) []:Organization Name (eg, company) []:Organizational Unit Name (eg, section) []:Common Name (eg, YOUR name) []:Email Address []:
-Please enter the following 'extra' attributes
-to be sent with your certificate request
-A challenge password []:An optional company name []:
+======== openssl req -subj "/C=GR/ST=ATTIKI/L=ATHENS/O=MY_MYSELF_I/CN=my.domain.netmode.ntua.gr" -new -key gened.key -keyform PEM -out requed.csr 2>&1 | tee -a lab4_output.text ========
+
 
 ======== openssl ca -in requed.csr -out fin.crt 2>&1 | tee -a lab4_output.text ========
 Using configuration from /etc/ssl/openssl.cnf
@@ -179,27 +169,25 @@ Signature ok
 Certificate Details:
         Serial Number: 1 (0x1)
         Validity
-            Not Before: Jan 26 07:32:30 2014 GMT
-            Not After : Jan 26 07:32:30 2015 GMT
+            Not Before: Jan 26 12:13:55 2014 GMT
+            Not After : Jan 26 12:13:55 2015 GMT
         Subject:
             countryName               = GR
             stateOrProvinceName       = ATTIKI
-            organizationName          = ME_MYSELF_I
-            organizationalUnitName    = CHIEF
-            commonName                = ALEISTER
-            emailAddress              = spiritual.dragon.of.ra@gmail.com
+            organizationName          = MY_MYSELF_I
+            commonName                = my.domain.netmode.ntua.gr
         X509v3 extensions:
             X509v3 Basic Constraints: 
                 CA:FALSE
             Netscape Comment: 
                 OpenSSL Generated Certificate
             X509v3 Subject Key Identifier: 
-                85:A6:64:FC:AB:BA:10:D0:1C:80:52:F9:1F:38:85:DC:FD:A7:5B:DA
+                D7:78:71:49:13:A0:BD:97:AD:EB:24:A5:AC:14:39:BE:8F:9D:EC:C0
             X509v3 Authority Key Identifier: 
                 DirName:/C=GR/ST=Attica/L=Athens/O=NTUA/OU=NETMODE/CN=NETMODE COURSE CA - 2008/emailAddress=root@netmode.ntua.gr
                 serial:92:C5:2F:BC:2E:8F:01:13
 
-Certificate is to be certified until Jan 26 07:32:30 2015 GMT (365 days)
+Certificate is to be certified until Jan 26 12:13:55 2015 GMT (365 days)
 Sign the certificate? [y/n]:
 
 1 out of 1 certificate requests certified, commit? [y/n]Write out database with 1 new entries
@@ -231,8 +219,8 @@ SSL_connect:SSLv3 write finished A
 SSL_connect:SSLv3 flush data
 SSL3 alert read:fatal:handshake failure
 SSL_connect:failed in SSLv3 read finished A
-48997:error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure:/usr/src/secure/lib/libssl/../../../crypto/openssl/ssl/s3_pkt.c:1102:SSL alert number 40
-48997:error:140790E5:SSL routines:SSL23_WRITE:ssl handshake failure:/usr/src/secure/lib/libssl/../../../crypto/openssl/ssl/s23_lib.c:188:
+58484:error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure:/usr/src/secure/lib/libssl/../../../crypto/openssl/ssl/s3_pkt.c:1102:SSL alert number 40
+58484:error:140790E5:SSL routines:SSL23_WRITE:ssl handshake failure:/usr/src/secure/lib/libssl/../../../crypto/openssl/ssl/s23_lib.c:188:
 CONNECTED(00000003)
 
 
@@ -288,7 +276,7 @@ issuer=/C=GR/ST=ATTICA/L=Athens/O=NETMODE/CN=sorch.netmode.ntua.gr
 Acceptable client certificate CA names
 /C=GR/ST=Attica/L=Athens/O=NTUA/OU=NETMODE/CN=NETMODE COURSE CA - 2008/emailAddress=root@netmode.ntua.gr
 ---
-SSL handshake has read 1313 bytes and written 1307 bytes
+SSL handshake has read 1313 bytes and written 1258 bytes
 ---
 New, TLSv1/SSLv3, Cipher is DHE-RSA-AES256-SHA
 Server public key is 1024 bit
@@ -298,24 +286,24 @@ Expansion: NONE
 SSL-Session:
     Protocol  : TLSv1
     Cipher    : DHE-RSA-AES256-SHA
-    Session-ID: D370A1C9F53D69CB35748ED69584E092EB06B5976A57295E71A19E9BAE8782AA
+    Session-ID: 7CE1CCB48903DB0E28549616E5F608DD52730B5705732495153511FE3E21B496
     Session-ID-ctx: 
-    Master-Key: 54A5CB68EA6EF6BE811375BA8C6342264EF0E969010D148E50F8A9089A0B75D3B6992179D9EE2E67E12E8BDC7244CC9D
+    Master-Key: 725041DCFA5AA408A7EC8BC1D90D7A7218E9798FFD9EC50CBD21E1C47E1227CD3D34354C90AEDDC41729EB379F506C9E
     Key-Arg   : None
-    Start Time: 1390721554
+    Start Time: 1390738438
     Timeout   : 300 (sec)
     Verify return code: 10 (certificate has expired)
 ---
 HTTP/1.1 200 OK
-Date: Sun, 26 Jan 2014 07:32:46 GMT
+Date: Sun, 26 Jan 2014 12:14:08 GMT
 Server: Apache/2.2.12 (Ubuntu)
 X-Powered-By: PHP/5.2.10-2ubuntu6.10
 Vary: Accept-Encoding
-Content-Length: 21
+Content-Length: 38
 Connection: close
 Content-Type: text/html
 
-Welcome ALEISTER!!!
+Welcome my.domain.netmode.ntua.gr!!!
 
 SSL3 alert read:warning:close notify
 SSL3 alert write:warning:close notify
