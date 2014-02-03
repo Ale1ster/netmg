@@ -1,4 +1,4 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; erotima 1 ;;;;;;;;;;;;;;;;;;;;
+==============================  Question 1  ==============================
 ; <<>> DiG 9.6.2-P2 <<>> @ulysses.noc.ntua.gr danaos.cslab.ntua.gr A
 ; (2 servers found)
 ;; global options: +cmd
@@ -37,7 +37,7 @@ scirouter.cslab.ece.ntua.gr. 86400 IN	A	147.102.4.1
 ;; MSG SIZE  rcvd: 382
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; erotima 2 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+==============================  Question 2  ==============================
 ; <<>> DiG 9.6.2-P2 <<>> @ulysses.noc.ntua.gr netmode.ece.ntua.gr SOA
 ; (2 servers found)
 ;; global options: +cmd
@@ -68,9 +68,8 @@ achilles.noc.ntua.gr.	86400	IN	AAAA	2001:648:2000:de::210
 ;; WHEN: Sat Jan 25 23:40:35 2014
 ;; MSG SIZE  rcvd: 251
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; erotima 3 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-
+==============================  Question 3  ==============================
 ; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr -x 147.102.13.200
 ; (1 server found)
 ;; global options: +cmd
@@ -102,7 +101,7 @@ achilles.noc.ntua.gr.	44879	IN	AAAA	2001:648:2000:de::210
 ;; MSG SIZE  rcvd: 258
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;; erotima 5 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+==============================  Question 5  ==============================
 ; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr ntua.gr MX
 ; (1 server found)
 ;; global options: +cmd
@@ -142,8 +141,8 @@ sns1.grnet.gr.		70153	IN	AAAA	2001:648:2ffc:112::2
 ;; WHEN: Sat Jan 25 23:57:04 2014
 ;; MSG SIZE  rcvd: 409
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;; erotima 6 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+==============================  Question 6  ==============================
 ; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr smtp.hol.gr A
 ; (1 server found)
 ;; global options: +cmd
@@ -173,8 +172,8 @@ ns0.hol.gr.		2794	IN	A	194.30.220.110
 ;; WHEN: Sat Jan 25 23:59:30 2014
 ;; MSG SIZE  rcvd: 163
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;; erotima 7 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+==============================  Question 7  ==============================
 ; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr
 ; (1 server found)
 ;; global options: +cmd
@@ -221,7 +220,7 @@ m.root-servers.net.	296875	IN	A	202.12.27.33
 ;; MSG SIZE  rcvd: 496
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+============================================================
 ; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr gr
 ; (1 server found)
 ;; global options: +cmd
@@ -241,7 +240,7 @@ gr.			1773	IN	SOA	grdns.ics.forth.gr. hmaster-info.ics.forth.gr. 1401251894 3600
 ;; MSG SIZE  rcvd: 85
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+============================================================
 ; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr ntua.gr
 ; (1 server found)
 ;; global options: +cmd
@@ -280,7 +279,7 @@ sns1.grnet.gr.		69898	IN	AAAA	2001:648:2ffc:112::2
 ;; MSG SIZE  rcvd: 377
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+============================================================
 ; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr netmode.ntua.gr
 ; (1 server found)
 ;; global options: +cmd
@@ -312,7 +311,7 @@ achilles.noc.ntua.gr.	43794	IN	AAAA	2001:648:2000:de::210
 ;; MSG SIZE  rcvd: 234
 
 
-;;;;;;;;;;;;;;;;;;; b ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+==============================  b  ==============================
 ; <<>> DiG 9.6.2-P2 <<>> +trace netmode.ntua.gr
 ;; global options: +cmd
 .			179891	IN	NS	e.root-servers.net.
@@ -353,8 +352,8 @@ netmode.ntua.gr.	86400	IN	NS	achilles.noc.ntua.gr.
 netmode.ntua.gr.	86400	IN	NS	ulysses.noc.ntua.gr.
 ;; Received 234 bytes from 147.102.222.210#53(achilles.noc.ntua.gr) in 0 ms
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; erotima 8 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+==============================  Question 8  ==============================
 ; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr space.netmode.ece.ntua.gr A
 ; (1 server found)
 ;; global options: +cmd
@@ -386,7 +385,7 @@ achilles.noc.ntua.gr.	43673	IN	AAAA	2001:648:2000:de::210
 ;; MSG SIZE  rcvd: 232
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+============================================================
 ; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr space.netmode.ece.ntua.gr A
 ; (1 server found)
 ;; global options: +cmd
@@ -418,7 +417,7 @@ achilles.noc.ntua.gr.	43661	IN	AAAA	2001:648:2000:de::210
 ;; MSG SIZE  rcvd: 232
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+============================================================
 ; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr achilles.noc.ntua.gr
 ; (1 server found)
 ;; global options: +cmd
@@ -450,7 +449,7 @@ ulysses.noc.ntua.gr.	63590	IN	AAAA	2001:648:2000:de::230
 ;; MSG SIZE  rcvd: 229
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+============================================================
 ; <<>> DiG 9.6.2-P2 <<>> @dolly.netmode.ntua.gr achilles.noc.ntua.gr
 ; (1 server found)
 ;; global options: +cmd
@@ -480,5 +479,3 @@ ulysses.noc.ntua.gr.	63576	IN	AAAA	2001:648:2000:de::230
 ;; SERVER: 147.102.13.10#53(147.102.13.10)
 ;; WHEN: Sun Jan 26 00:04:29 2014
 ;; MSG SIZE  rcvd: 229
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
