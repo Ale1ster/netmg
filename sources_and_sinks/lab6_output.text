@@ -1,0 +1,10 @@
+======== /usr/local/libexec/nagios/check_tcp -H www.otenet.gr -p 80 | tee -a lab6_output.text ========
+TCP OK - 0.002 second response time on port 80|time=0.002336s;;;0.000000;10.000000
+======== /usr/local/libexec/nagios/check_fping unbearable_also.mooo.com | tee -a lab6_output.text ========
+FPING OK - unbearable_also.mooo.com (loss=0%, rta=1.460000 ms)|loss=0%;;;0;100 rta=0.001460s;;;0.000000
+======== /usr/local/libexec/nagios/check_fping unbearable.mooo.com | tee -a lab6_output.text ========
+FPING CRITICAL - unbearable.mooo.com (loss=100% )|loss=100%;;;0;100
+======== /usr/local/libexec/nagios/check_hpjd -H blondie | tee -a lab6_output.text ========
+Printer ok - ("Ready           ")
+======== /usr/local/libexec/nagios/check_http -H localhost -p 80 | tee -a lab6_output.text ========
+HTTP OK: HTTP/1.1 200 OK - 363 bytes in 0.002 second response time |time=0.002339s;;;0.000000 size=363B;;;0

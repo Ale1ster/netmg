@@ -1,0 +1,175 @@
+FIREWALL-MIB DEFINITIONS ::= BEGIN
+	IMPORTS
+		enterprises, OBJECT-TYPE, MODULE-IDENTITY, Integer32, Unsigned32, IpAddress, Counter32, TimeTicks
+			FROM SNMPv2-SMI
+		OBJECT-GROUP
+			FROM SNMPv2-CONF
+		ifIndex
+			FROM IF-MIB;
+
+fwMIB MODULE-IDENTITY
+	LAST-UPDATED	"201402242317Z"
+	ORGANIZATION	"Me, Myself & I"
+	CONTACT-INFO	"shit.happens@life.com"
+	DESCRIPTION		"Firewall MIB module for netmg lab"
+	REVISION		"201402242317Z"
+	DESCRIPTION		"It's a new day!"
+	::= { enterprises 9999 }
+
+	firewall OBJECT IDENTIFIER ::= { fwMIB 13 }
+
+	firewallGroup OBJECT-GROUP
+		OBJECTS		{
+			fwUpTime, fwSystemInfo,
+			activationCounter,
+			ruleNo, ruleAction, ruleProtocol, 
+			ruleSrcIP, ruleSrcIPMask, ruleDstIP, ruleDstIPMask, ruleSrcPort, ruleDstPort,
+			enabledOrNot
+		}
+		STATUS		current
+		DESCRIPTION	"The grouping happens here... :/"
+		::= { firewall 1 }
+
+	fwUpTime OBJECT-TYPE
+		SYNTAX		TimeTicks
+		MAX-ACCESS	read-only
+		STATUS		current
+		DESCRIPTION	"Uptime of firewall module (in 100ths of a second)"
+		::= { firewall 42 }
+
+	fwSystemInfo OBJECT-TYPE
+		SYNTAX		OCTET STRING (SIZE(1..256))
+		MAX-ACCESS	read-only
+		STATUS		current
+		DESCRIPTION	"Firewall system description"
+		::= { firewall 43 }
+
+	fwRuleIfaceAssocTable OBJECT-TYPE
+		SYNTAX		SEQUENCE OF FwRuleIfaceAssocType
+		MAX-ACCESS	not-accessible
+		STATUS		current
+		DESCRIPTION	"Association of rules with interfaces"
+		INDEX		{ ifIndex, ruleNo }
+		::= { firewall 3 }
+
+	fwRuleIfaceAssocEntry OBJECT-TYPE
+		SYNTAX		FwRuleIfaceAssocType
+		MAX-ACCESS	not-accessible
+		STATUS		current
+		DESCRIPTION	"Association entry. The keys (indices) are the information, so only a dummy entry is needed."
+		INDEX		{ ifIndex, ruleNo }
+		::= { fwRuleIfaceAssocTable 1 }
+
+	FwRuleIfaceAssocType ::=
+		SEQUENCE {
+			enabledOrNot			Unsigned32
+		}
+
+	enabledOrNot OBJECT-TYPE
+		SYNTAX		Unsigned32
+		MAX-ACCESS	read-only
+		STATUS		current
+		DESCRIPTION	"Dummy value for association of rules to interfaces"
+		::= { fwRuleIfaceAssocEntry 1 }
+
+	fwRuleTable OBJECT-TYPE
+		SYNTAX		SEQUENCE OF FwRuleType
+		MAX-ACCESS	not-accessible
+		STATUS		current
+		DESCRIPTION	"Firewall rule table"
+		INDEX		{ ruleNo }				--This is not the place for indexing anymore. This is the independent table.
+		::= { firewall 2 }
+
+	fwRuleEntry OBJECT-TYPE
+		SYNTAX		FwRuleType
+		MAX-ACCESS	not-accessible
+		STATUS		current
+		DESCRIPTION	"A firewall rule entry"
+		INDEX		{ ifIndex }				--{ ifIndex, ruleNo }	:: If I put ruleNo an index, I have to make it not-accessible...
+		::= { fwRuleTable 1 }
+
+	FwRuleType ::=
+		SEQUENCE {
+			ruleNo					Integer32,
+			ruleAction				Unsigned32,			--	Unsigned32 { drop(1), pass(2) },
+			ruleProtocol			Unsigned32,			--	Unsigned32 { ip(1), icmp(2), tcp(3), udp(4) },
+			ruleSrcIP				IpAddress,
+			ruleSrcIPMask			IpAddress,
+			ruleDstIP				IpAddress,
+			ruleDstIPMask			IpAddress,
+			ruleSrcPort				OCTET STRING,
+			ruleDstPort				OCTET STRING,
+			activationCounter		Counter32
+		}
+
+	ruleNo OBJECT-TYPE
+		SYNTAX		Integer32 (1 .. 2147483647)
+		MAX-ACCESS	read-only
+		STATUS		current
+		DESCRIPTION	"Incremental rule number"
+		::= { fwRuleEntry 2 }
+
+	ruleAction OBJECT-TYPE
+		SYNTAX		Unsigned32		--{ drop(1), pass(2) }
+		MAX-ACCESS	read-only
+		STATUS		current
+		DESCRIPTION	"Pass or fail action under a rule"
+		::= { fwRuleEntry 3 }
+
+	ruleProtocol OBJECT-TYPE
+		SYNTAX		Unsigned32		--{ ip(1), icmp(2), tcp(3), udp(4) },
+		MAX-ACCESS	read-only
+		STATUS		current
+		DESCRIPTION	"Packet protocol of packets that will match the rule"
+		::= { fwRuleEntry 4 }
+
+	ruleSrcIP OBJECT-TYPE
+		SYNTAX		IpAddress
+		MAX-ACCESS	read-only
+		STATUS		current
+		DESCRIPTION	"Packet source IP address"
+		::=	{ fwRuleEntry 5 }
+
+	ruleSrcIPMask OBJECT-TYPE
+		SYNTAX		IpAddress
+		MAX-ACCESS	read-only
+		STATUS		current
+		DESCRIPTION	"Packet source IP mask"
+		::=	{ fwRuleEntry 6 }
+
+	ruleDstIP OBJECT-TYPE
+		SYNTAX		IpAddress
+		MAX-ACCESS	read-only
+		STATUS		current
+		DESCRIPTION	"Packet destination IP address"
+		::=	{ fwRuleEntry 7 }
+
+	ruleDstIPMask OBJECT-TYPE
+		SYNTAX		IpAddress
+		MAX-ACCESS	read-only
+		STATUS		current
+		DESCRIPTION	"Packet destination IP mask"
+		::=	{ fwRuleEntry 8 }
+
+	ruleSrcPort OBJECT-TYPE
+		SYNTAX		OCTET STRING (SIZE(0..11))
+		MAX-ACCESS	read-only
+		STATUS		current
+		DESCRIPTION	"Packet source port"
+		::= { fwRuleEntry 9 }
+
+	ruleDstPort OBJECT-TYPE
+		SYNTAX		OCTET STRING (SIZE(0..11))
+		MAX-ACCESS	read-only
+		STATUS		current
+		DESCRIPTION	"Packet destination port"
+		::= { fwRuleEntry 10 }
+
+	activationCounter OBJECT-TYPE
+		SYNTAX		Counter32
+		MAX-ACCESS	read-only
+		STATUS		current
+		DESCRIPTION	"Rule use counter"
+		::= { fwRuleEntry 1 }
+
+END
